@@ -5,42 +5,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitResult, setSubmitResult] = useState<{
-    success: boolean;
-    message: string;
-  } | null>(null);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission - Replace with actual form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitResult({
-        success: true,
-        message: 'Thank you! Your message has been sent successfully.'
-      });
-      
-      // Reset form
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset status message after 5 seconds
-      setTimeout(() => setSubmitResult(null), 5000);
-    }, 1500);
-  };
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -63,8 +27,8 @@ const ContactSection = () => {
                     </svg>
                   }
                   title="Email"
-                  content="marijnvanwaterschoot@hotmail.com"
-                  link="mailto:marijnvanwaterschoot@hotmail.com"
+                  content="marijnvw.contact@gmail.com"
+                  link="mailto:marijnvw.contact@gmail.com"
                 />
                 
                 <ContactItem 
@@ -109,85 +73,52 @@ const ContactSection = () => {
             
           </div>
           
-          {/* Contact Form */}
-          <div className="h-full">
+                  {/* Contact Form */}
+                  <div className="h-full">
             <div className="bg-white rounded-lg p-6 shadow-md h-full flex flex-col justify-between">
               <h3 className="text-xl font-semibold mb-6 text-primary">Send a Message</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
+
+              <form
+                action="https://formsubmit.co/marijnvw.contact@gmail.com"
+                method="POST"
+                className="space-y-6"
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="Nieuw bericht via portfolio site!" />
+                <input type="hidden" name="_template" value="box" />
+                <input type="hidden" name="_next" value="https://marijnvw.github.io/" />
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Name
+                    Naam
                   </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your name"
-                    required
-                  />
+                  <Input id="name" name="name" placeholder="Jouw naam" required />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email
+                    E-mail
                   </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Your email"
-                    required
-                  />
+                  <Input id="email" name="email" type="email" placeholder="Emailadress" required />
                 </div>
-                
+
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                    Subject
+                    Onderwerp
                   </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="Subject"
-                    required
-                  />
+                  <Input id="subject" name="subject" placeholder="Onderwerp" required />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message
+                    Bericht
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Your message"
-                    rows={4}
-                    required
-                  />
+                  <Textarea id="message" name="message" placeholder="Jouw bericht" rows={5} required />
                 </div>
-                
-                <Button 
-                  type="submit" 
-                  className="btn-primary w-full"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+
+                <Button type="submit" className="btn-primary w-full">
+                  Verstuur bericht
                 </Button>
-                
-                {submitResult && (
-                  <div className={`text-center p-3 rounded-md ${
-                    submitResult.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
-                  }`}>
-                    {submitResult.message}
-                  </div>
-                )}
               </form>
             </div>
           </div>

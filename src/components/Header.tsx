@@ -29,10 +29,10 @@ const Header = () => {
 
   const navigationLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Over mij', href: '#about' },
+    { name: 'Projecten', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Education', href: '#education' },
+    { name: 'Ervaringen', href: '#education' },
     { name: 'Contact', href: '#contact' },
   ];
 

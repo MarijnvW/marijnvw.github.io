@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">John Doe</h3>
             <p className="text-gray-300 mb-4">
-              Full-stack developer passionate about creating beautiful and functional web experiences.
+            Full-stack data professional met een passie voor het creëren van slimme, datagedreven toepassingen die zowel functioneel als gebruiksvriendelijk zijn.
             </p>
             <p className="text-gray-300">
               © {currentYear} All rights reserved.
@@ -25,16 +25,16 @@ const Footer = () => {
                 <a href="#home" className="text-gray-300 hover:text-white transition-colors">Home</a>
               </li>
               <li>
-                <a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a>
+                <a href="#about" className="text-gray-300 hover:text-white transition-colors">Over mij</a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-300 hover:text-white transition-colors">Projects</a>
+                <a href="#projects" className="text-gray-300 hover:text-white transition-colors">Projecten</a>
               </li>
               <li>
                 <a href="#skills" className="text-gray-300 hover:text-white transition-colors">Skills</a>
               </li>
               <li>
-                <a href="#education" className="text-gray-300 hover:text-white transition-colors">Education</a>
+                <a href="#education" className="text-gray-300 hover:text-white transition-colors">Ervaring</a>
               </li>
               <li>
                 <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
@@ -50,8 +50,8 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:marijnvanwaterschoot@hotmail.com" className="text-gray-300 hover:text-white transition-colors">
-                  marijnvanwaterschoot@hotmail.com
+                <a href="mailto:marijnvw.contact@gmail.com" className="text-gray-300 hover:text-white transition-colors">
+                marijnvw.contact@gmail.com
                 </a>
               </li>
               <li className="flex items-center">

@@ -1,4 +1,3 @@
-
 import { cn } from '@/lib/utils';
 
 interface Education {
@@ -26,11 +25,11 @@ const educationData: Education[] = [
     id: 1,
     degree: "Master Data Science and Society",
     institution: "Tilburg University",
-    location: "Tilburg",
+    location: "Tilburg, Nederland",
     duration: "2023 - 2024",
     description: "Vaardigheden: Python · Apache Spark · R · SQL · Data mining · Machine learning · Deep learning · Statistics.",
     achievements: [
-      "Thesis: To what extent do bull and bear market conditions impact the effectiveness of certain features in forecasting Bitcoin price?",
+      '<a href="/DSS_Masters_Thesis_Marijn_van_Waterschoot.pdf" target="_blank" rel="noopener noreferrer" className="text-accent underline"> Thesis:"To what extent do bull and bear market conditions impact the effectiveness of certain features in forecasting Bitcoin price?" ⤓</a>',
       "GPA: 8.1/10",
       "Graduated with Distinction"
     ]
@@ -39,7 +38,7 @@ const educationData: Education[] = [
     id: 2,
     degree: "Pre-master Data Science and Society",
     institution: "Tilburg University",
-    location: "Tilburg",
+    location: "Tilburg, Nederland",
     duration: "2022 - 2023",
     description: "Courses: Programming and Algorithmic Thinking, Statistics, Introduction to Artificial Intelligence and Calculus",
     achievements: [
@@ -50,7 +49,7 @@ const educationData: Education[] = [
     id: 3,
     degree: "Bachelor Finance and Control",
     institution: "Avans Hogeschool",
-    location: "Breda",
+    location: "Breda, Nederland",
     duration: "2018 - 2022",
     description: "Minor: Data Science - Hogeschool Amsterdam",
     achievements: [
@@ -64,7 +63,7 @@ const experienceData: Experience[] = [
     id: 1,
     role: "Data/Finance Professional",
     company: "I4Talent (detachering)",
-    location: "VolkerWessels Telecom",
+    location: "VolkerWessels Telecom (Nieuwegein)",
     duration: "mei 2024 – heden",
     description: "Gedetacheerd bij VolkerWessels Telecom als financial professional. Ik hielp achterstanden wegwerken, ondersteunde administratieve processen en bracht verbeterpunten in kaart.",
     achievements: [
@@ -77,7 +76,7 @@ const experienceData: Experience[] = [
     id: 2,
     role: "Verkoop Assistent",
     company: "Green Menswear",
-    location: "Nederland",
+    location: "Papendrecht, Nederland",
     duration: "oktober 2016 – mei 2024",
     description: "Verantwoordelijk voor het openen/sluiten van de winkel, kassa en klantcontact. Ondersteuning bij inkoop van nieuwe collectie.",
     achievements: [
@@ -90,7 +89,7 @@ const experienceData: Experience[] = [
     id: 3,
     role: "Afstudeerstage",
     company: "New Horizon",
-    location: "Nederland",
+    location: "Raamsdonksveer, Nederland",
     duration: "februari 2022 – juni 2022",
     description: "Afstudeeropdracht gericht op het berekenen van de verkoopwaarde van circulair beton.",
     achievements: [
@@ -101,7 +100,7 @@ const experienceData: Experience[] = [
     id: 4,
     role: "Afstudeerstage",
     company: "Iv-Groep",
-    location: "Nederland",
+    location: "Papendrecht, Nederland",
     duration: "september 2021 – januari 2022",
     description: "Opstellen van een adviesrapport over Transfer Pricing als afstudeeropdracht.",
     achievements: [
@@ -115,9 +114,10 @@ const EducationSection = () => {
   return (
     <section id="education" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="section-title">Education & Experience</h2>
+        <h2 className="section-title">Opleiding & Ervaring</h2>
         <p className="text-gray-600 mb-12 max-w-2xl">
-          Een overzicht van mijn academische achtergrond en ervaringen die hebben bijgedragen aan mijn ontwikkeling.
+          Een overzicht van mijn academische achtergrond en ervaringen die hebben bijgedragen aan mijn ontwikkeling. 
+          <a href="/CV_Marijn.pdf" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-medium"> Download CV ⤓</a>
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -128,7 +128,7 @@ const EducationSection = () => {
                 <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
               </svg>
-              Education
+              Opleiding
             </h3>
             
             <div className="relative pl-8 border-l-2 border-accent space-y-10">
@@ -153,7 +153,7 @@ const EducationSection = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Work Experience
+              Werkervaring
             </h3>
             
             <div className="relative pl-8 border-l-2 border-accent space-y-10">
@@ -223,7 +223,7 @@ const TimelineItem = ({
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-accent mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm">{achievement}</span>
+                <span className="text-sm" dangerouslySetInnerHTML={{ __html: achievement }} />
               </li>
             ))}
           </ul>

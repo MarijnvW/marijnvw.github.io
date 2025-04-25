@@ -11,6 +11,7 @@ const frontendSkills: Skill[] = [
   { name: 'HTML', icon: '🌐', level: 75 },
   { name: 'CSS', icon: '🎨', level: 75 },
   { name: 'JavaScript', icon: 'JS', level: 50 },
+  { name: 'Material UI', icon: '👨🏼‍💻', level: 45 },
   { name: 'React', icon: '⚛️', level: 45 },
 ];
 
@@ -18,32 +19,32 @@ const backendSkills: Skill[] = [
   { name: 'Python', icon: '🐍', level: 90 },
   { name: 'Machine Learning', icon: '📈', level: 85 },
   { name: 'Deep Learning', icon: '🧠', level: 85 },
-  { name: 'SQL', icon: '🗃️', level: 85 },
+  { name: 'SQL', icon: '🗃️', level: 80 },
   { name: 'FastAPI', icon: '🗃️', level: 70 }, 
   { name: 'PostgreSQL', icon: '◼️', level: 70 },
-
+  { name: 'R', icon: '®️', level: 75},
 ];
 const otherSkills: Skill[] = [
-  { name: 'PowerBI', icon: '📚', level: 85 },
-  { name: 'Excel', icon: '🟢', level: 85 },
-  { name: 'Git', icon: '📚', level: 85 },
-  { name: 'Docker', icon: '🐳', level: 75 },
-  { name: 'Testing', icon: '🧪', level: 80 },
-  { name: 'CI/CD', icon: '🔄', level: 75 },
+  { name: 'Excel', icon: '🟢', level: 90 },
+  { name: 'VS Code', icon: 'VS', level: 85 },
+  { name: 'Jupyter', icon: '🪐', level: 85 },
+  { name: 'PowerBI', icon: '📚', level: 75 },
+  { name: 'Git', icon: '📚', level: 75 },
+  { name: 'Docker', icon: '🐳', level: 65 },
 ];
 
 const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="section-title">My Skills</h2>
+        <h2 className="section-title">Mijn Skills</h2>
         <p className="text-gray-600 mb-12 max-w-2xl">
           Ik heb in de loop van mijn carrière een breed scala aan vaardigheden ontwikkeld. Hieronder vind je een overzicht van mijn technische expertise.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <SkillCategory title="Frontend Development" skills={frontendSkills} />
-          <SkillCategory title="Backend Development" skills={backendSkills} />
+          <SkillCategory title="Backend (Data)" skills={backendSkills} />
           <SkillCategory title="Other Skills" skills={otherSkills} />
         </div>
       </div>

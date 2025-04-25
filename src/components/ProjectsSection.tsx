@@ -17,31 +17,15 @@ const projects: Project[] = [
     title: "CV-Generator",
     description: "Een full-stack CV-generator gebouwd met React, FastAPI en PostgreSQL. De applicatie bevat dynamische invoerformulieren, REST API-integratie, databaseopslag en automatische PDF-generatie met ReportLab.",
     image: "/images/CV-Generator.jpg",
-    tags: ["React", "Node.js", "Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "ReportLab"],
+    tags: ["React", "Node.js", "Python", "FastAPI", "SQL", "PostgreSQL", "ReportLab"],
     codeLink: "https://github.com/MarijnvW",
   },
   {
     id: 2,
-    title: "(Voorbeeld) Task Management App",
-    description: "A task management application with drag and drop functionality, labels, due dates, and team collaboration features.",
-    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=80",
-    tags: ["Vue.js", "Firebase", "Tailwind CSS"],
-    codeLink: "https://github.com",
-  },
-  {
-    id: 3,
-    title: "(Voorbeeld) Weather Forecast Application",
-    description: "A weather forecast application that displays current weather conditions and a 5-day forecast based on geolocation.",
-    image: "https://images.unsplash.com/photo-1534088568595-a066f410bcda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1502&q=80",
-    tags: ["JavaScript", "OpenWeather API", "CSS3"],
-    codeLink: "https://github.com",
-  },
-  {
-    id: 4,
-    title: "(Voorbeeld) Fitness Tracking Dashboard",
-    description: "A fitness tracking dashboard that allows users to log workouts, track progress, and view performance metrics.",
-    image: "https://images.unsplash.com/photo-1579126038374-6064e9370f0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
-    tags: ["Angular", "Chart.js", "Node.js", "Express"],
+    title: "(Upcoming) Funda huizenmarkt analyse",
+    description: "Analyse van de Nederlandse huizenmarkt met data van de Funda API, gecombineerd met externe bronnen. Met behulp van Python en machine learning voorspel ik de verwachte verkoopprijzen van woningen.",
+    image: "/images/Funda_Project.jpg",
+    tags: ["Python", "API", "Machine Learning"],
     codeLink: "https://github.com",
   },
 ];
@@ -58,7 +42,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="section-title">My Projects</h2>
+        <h2 className="section-title">Mijn Projecten</h2>
         <p className="text-gray-600 mb-8 max-w-2xl">
           Hier zie je een aantal van mijn recente projecten, 
           waarin ik mijn passie voor data en technologie heb kunnen toepassen en verder ontwikkelen.
